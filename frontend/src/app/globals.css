@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b111a;
+  --default-color: #a3b3bc;
+  --heading-color: #ffffff;
+  --accent-cyan: #00f2fe;
+  --accent-purple: #b122e5;
+  --surface-card: rgba(17, 26, 38, 0.45);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--default-color);
+  font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Page Entrance / Fade In Up Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+  color: var(--heading-color);
+}
+
+/* Ambient Glowing Orbs Background */
+.bg-glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(140px);
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.6;
+}
+.orb-1 {
+  width: 500px;
+  height: 500px;
+  background: rgba(0, 242, 254, 0.15);
+  top: -10%;
+  left: -5%;
+}
+.orb-2 {
+  width: 600px;
+  height: 600px;
+  background: rgba(177, 34, 229, 0.12);
+  bottom: -15%;
+  right: -5%;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  background: rgba(17, 26, 38, 0.5);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+.glass-card:hover {
+  border-color: rgba(0, 242, 254, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 242, 254, 0.08);
+  transform: translateY(-4px);
+}
+
+/* Gradients */
+.text-gradient-cyan {
+  background: linear-gradient(90deg, #00f2fe, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient-purple {
+  background: linear-gradient(90deg, #b122e5, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Button Custom Styles */
+.btn-cyan-glow {
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.2), rgba(0, 242, 254, 0.05));
+  border: 1px solid #00f2fe;
+  color: #00f2fe;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-cyan-glow:hover {
+  background: #00f2fe;
+  color: #0b111a;
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-purple-glow {
+  background: linear-gradient(135deg, rgba(177, 34, 229, 0.2), rgba(177, 34, 229, 0.05));
+  border: 1px solid #b122e5;
+  color: #d880fd;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-purple-glow:hover {
+  background: #b122e5;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(177, 34, 229, 0.5);
+  transform: translateY(-2px);
+}
+

@@ -1,0 +1,428 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Self Hosted Blog Project - Portfolio Details</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link href="assets/img/favicon-16x16.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* WARNA DISAMAKAN DENGAN TEMA GELAP SOLID */
+    
+    body.portfolio-details-page {
+      background-color: #0b111a; 
+    }
+
+    /* Wrapper Kiri & Kanan */
+    .portfolio-details-media,
+    .portfolio-details-content {
+      background: #111720;
+      border: 1px solid #222b36;
+      border-radius: 16px;
+      padding: 35px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Slider Kiri */
+    .main-image .swiper-slide img {
+      border-radius: 12px;
+    }
+    
+    .thumbnail-grid img {
+      border-radius: 8px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: 0.3s;
+      background: #ffffff;
+    }
+    
+    .thumbnail-grid img:hover {
+      border-color: var(--accent-cyan);
+      transform: translateY(-3px);
+    }
+
+    /* Tech Stack Badges */
+    .tech-stack-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+    .tech-stack-badges span {
+      background: #19202a;
+      border: 1px solid #2e3846;
+      color: #8b949e;
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+    }
+
+    /* Label Badge Utama */
+    .project-badge {
+      background: rgba(0, 242, 254, 0.1) !important;
+      border: 1px solid #00f2fe;
+      color: #00f2fe !important;
+      padding: 6px 20px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .date-client {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+      margin-bottom: 25px;
+    }
+
+    .meta-item {
+      color: #a3b3bc;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .meta-item i {
+      color: #b122e5;
+      font-size: 1.1rem;
+    }
+
+    /* Typography */
+    .project-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    .lead {
+      color: #a3b3bc;
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    /* Accordion Detail Penjelasan (PUTIH SAAT DIBUKA) */
+    .accordion-item {
+      border: none;
+      background: transparent;
+      margin-bottom: 10px;
+    }
+    .accordion-button {
+      background: #111720 !important;
+      color: #ffffff !important;
+      border: 1px solid #222b36;
+      border-radius: 8px !important;
+      padding: 15px 20px;
+      font-weight: 600;
+      box-shadow: none !important;
+    }
+    .accordion-button:not(.collapsed) {
+      background: #ffffff !important;
+      color: #00f2fe !important;
+      border: none;
+      border-bottom-left-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+    }
+    .accordion-button:not(.collapsed)::after {
+      filter: brightness(0) saturate(100%) invert(71%) sepia(50%) saturate(6011%) hue-rotate(149deg) brightness(102%) contrast(106%);
+    }
+    .accordion-button:not(.collapsed) i {
+      color: #00f2fe !important;
+    }
+    .accordion-body {
+      background: #ffffff !important;
+      color: #8b949e !important;
+      border: none;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      padding: 0 20px 20px 20px;
+      line-height: 1.7;
+    }
+
+    /* Fitur List */
+    .project-features h3 {
+      font-size: 1.3rem;
+      color: #ffffff;
+      margin: 30px 0 20px 0;
+      font-weight: 600;
+    }
+    .project-features h3 i {
+      color: #b122e5;
+      margin-right: 10px;
+    }
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .feature-list li {
+      color: #a3b3bc;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+    }
+    .feature-list li i {
+      color: #00f2fe;
+      font-size: 1.2rem;
+    }
+
+    /* Navbar */
+    .navmenu .active {
+      color: #ffffff !important;
+      font-weight: 700;
+    }
+    
+    /* Tombol CTA */
+    .cta-buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .btn-view-project {
+      background: rgba(0, 242, 254, 0.1);
+      border: 1px solid rgba(0, 242, 254, 0.4);
+      color: #ffffff;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: 0.3s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-view-project:hover {
+      background: rgba(0, 242, 254, 0.2);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+    .btn-next-project {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: 0.3s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-next-project:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body class="portfolio-details-page">
+
+  <div class="bg-glow orb-1"></div>
+  <div class="bg-glow orb-2"></div>
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="project.html" class="active">Project</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://blog.bgasrdy.my.id" target="_blank">Blog</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="https://github.com/dryuxxinn" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://www.instagram.com/bgasrdy/" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/bgasrdy/" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main" style="padding-top: 120px;">
+
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+          
+          <div class="col-lg-5" data-aos="fade-right">
+            <div class="portfolio-details-media">
+              
+              <div class="main-image mb-4">
+                <div class="portfolio-details-slider swiper init-swiper">
+                  <script type="application/json" class="swiper-config">
+                    {
+                      "loop": true,
+                      "speed": 800,
+                      "autoplay": { "delay": 5000 },
+                      "slidesPerView": 1,
+                      "navigation": {
+                        "nextEl": ".swiper-button-next",
+                        "prevEl": ".swiper-button-prev"
+                      }
+                    }
+                  </script>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/blog1.webp" alt="Blog Preview 1" class="img-fluid w-100">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/blog2.webp" alt="Blog Preview 2" class="img-fluid w-100">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/blog3.webp" alt="Blog Preview 3" class="img-fluid w-100">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/blog4.webp" alt="Blog Preview 4" class="img-fluid w-100">
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev" style="color: #00f2fe;"></div>
+                  <div class="swiper-button-next" style="color: #00f2fe;"></div>
+                </div>
+              </div>
+
+              <div class="thumbnail-grid">
+                <div class="row g-3">
+                  <div class="col-3">
+                    <a href="assets/img/portfolio/blog1.webp" class="glightbox"><img src="assets/img/portfolio/blog1.webp" alt="" class="img-fluid"></a>
+                  </div>
+                  <div class="col-3">
+                    <a href="assets/img/portfolio/blog2.webp" class="glightbox"><img src="assets/img/portfolio/blog2.webp" alt="" class="img-fluid"></a>
+                  </div>
+                  <div class="col-3">
+                    <a href="assets/img/portfolio/blog3.webp" class="glightbox"><img src="assets/img/portfolio/blog3.webp" alt="" class="img-fluid"></a>
+                  </div>
+                  <div class="col-3">
+                    <a href="assets/img/portfolio/blog4.webp" class="glightbox"><img src="assets/img/portfolio/blog4.webp" alt="" class="img-fluid"></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tech-stack-badges">
+                <span>Hosting</span>
+                <span>Cloudflare</span>
+                <span>SSL</span>
+                <span>Docker</span>
+                <span>HTML</span>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-left">
+            <div class="portfolio-details-content">
+              
+              <div class="project-meta">
+                <span class="project-badge">Server</span>
+              </div>
+              <div class="date-client">
+                <div class="meta-item"><i class="bi bi-calendar-check"></i> Maret 2025</div>
+                <div class="meta-item"><i class="bi bi-buildings"></i> Cyber Security Ethics Project - CCIT</div>
+              </div>
+
+              <h2 class="project-title">Implementasi Infrastruktur Blog Berbasis Container pada Home Server Menggunakan CasaOS dan Cloudflare Tunnel</h2>
+
+              <p class="lead">
+                Project ini bertujuan untuk mengimplementasikan blog self-hosted berbasis container pada STB HG680P menggunakan CasaOS. Dengan dukungan Cloudflare Tunnel, server lokal dapat diakses secara aman melalui domain publik ber-SSL, sehingga perangkat sederhana dapat berfungsi sebagai home server hemat biaya sekaligus sarana belajar self-hosting.
+              </p>
+
+              <div class="accordion project-accordion" id="portfolioAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
+                      <i class="bi bi-journal-text me-2"></i> Detail Penjelasan
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#portfolioAccordion">
+                    <div class="accordion-body">
+                      Proyek ini mengimplementasikan blog self-hosted pada STB HG680P berbasis Armbian dengan memanfaatkan CasaOS sebagai platform manajemen container. Proses deployment dilakukan menggunakan Docker dengan Nginx untuk menjalankan website statis. Akses publik disediakan melalui Cloudflare Tunnel, sehingga blog dapat diakses menggunakan domain ber-SSL tanpa perlu IP publik atau konfigurasi firewall yang rumit.<br><br>
+                      Dengan konfigurasi ini, STB HG680P dapat dimanfaatkan sebagai home server hemat biaya yang mendukung praktik self-hosting, pengelolaan file sederhana, serta dapat dikembangkan menjadi lab pribadi untuk pembelajaran DevOps maupun keamanan jaringan.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-features">
+                <h3><i class="bi bi-stars"></i> Kelebihan Deployment Ini</h3>
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <ul class="feature-list">
+                      <li><i class="bi bi-check2-circle"></i> Hemat biaya.</li>
+                      <li><i class="bi bi-check2-circle"></i> Daya rendah, efisien 24/7.</li>
+                      <li><i class="bi bi-check2-circle"></i> Mudah dikelola via CasaOS.</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-6">
+                    <ul class="feature-list">
+                      <li><i class="bi bi-check2-circle"></i> Fleksibel dengan Docker.</li>
+                      <li><i class="bi bi-check2-circle"></i> Akses aman via Cloudflare + SSL.</li>
+                      <li><i class="bi bi-check2-circle"></i> Tanpa IP publik & port forwarding.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cta-buttons">
+                <a href="https://blog.bgasrdy.my.id" class="btn-view-project" target="_blank">
+                  Kunjungi Blog <i class="bi bi-box-arrow-up-right ms-2"></i>
+                </a>
+                <a href="https://github.com/dryuxxinn/Infrastruktur-Blog-Project" class="btn-next-project" target="_blank">
+                  Documentation <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+              
+            </div>
+          </div>
+
+        </div> </div>
+    </section>
+
+  </main>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

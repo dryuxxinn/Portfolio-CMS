@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Project - Bergas Ardiansyah</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link href="assets/img/favicon-16x16.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+  
+  <style>
+    /* Styling tambahan khusus untuk link judul project agar rapi */
+    .project-title-link {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .project-title-link:hover {
+      color: var(--accent-cyan);
+    }
+    /* Memperbaiki jarak icon overlay jika ada dua icon */
+    .portfolio-overlay {
+      gap: 15px;
+    }
+  </style>
+</head>
+
+<body class="portfolio-page">
+
+  <div class="bg-glow orb-1"></div>
+  <div class="bg-glow orb-2"></div>
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+      
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" >Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="project.html" class="active">Project</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://blog.bgasrdy.my.id" target="_blank">Blog</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="https://github.com/dryuxxinn" class="github" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://www.instagram.com/bgasrdy/" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/bgasrdy/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main" style="padding-top: 120px;">
+
+    <section id="portfolio" class="portfolio section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2><span class="text-gradient-cyan">Project Saya</span></h2>
+        <p class="text-light">Beberapa proyek terkait infrastruktur, jaringan, dan keamanan siber yang pernah saya kerjakan.</p>
+      </div><div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
+
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+            <div class="portfolio-card">
+              <div class="portfolio-img">
+                <img src="assets/img/portfolio/wazuh-suri1.webp" alt="Wazuh Suricata" class="img-fluid">
+                <div class="portfolio-overlay">
+                  <a href="assets/img/portfolio/wazuh-suri1.webp" class="glightbox portfolio-lightbox"><i class="bi bi-zoom-in"></i></a>
+                  <a href="wazuh-suricata-integtration.html" class="portfolio-details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h4>
+                  <a href="wazuh-suricata-integtration.html" class="project-title-link">
+                    Rancangan SIEM Terintegrasi dengan Network IDS berbasis Wazuh dan Suricata
+                  </a>
+                </h4>
+                <p>Internship Project</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+            <div class="portfolio-card">
+              <div class="portfolio-img">
+                <img src="assets/img/portfolio/Armbian1.webp" alt="Casa OS" class="img-fluid">
+                <div class="portfolio-overlay">
+                  <a href="assets/img/portfolio/Armbian1.webp" class="glightbox portfolio-lightbox"><i class="bi bi-zoom-in"></i></a>
+                  <a href="casaos.html" class="portfolio-details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h4>
+                  <a href="casaos.html" class="project-title-link">
+                    Membuat Home Server dengan Casa OS pada STB HG680P
+                  </a>
+                </h4>
+                <p>Self Project</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+            <div class="portfolio-card">
+              <div class="portfolio-img">
+                <img src="assets/img/portfolio/Nextcloud1.webp" alt="Nextcloud Docker" class="img-fluid">
+                <div class="portfolio-overlay">
+                  <a href="assets/img/portfolio/Nextcloud1.webp" class="glightbox portfolio-lightbox"><i class="bi bi-zoom-in"></i></a>
+                  <a href="nextcloud-docker.html" class="portfolio-details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h4>
+                  <a href="nextcloud-docker.html" class="project-title-link">
+                    Deploy Nextcloud pada Home Server dengan CasaOS dan Docker
+                  </a>
+                </h4>
+                <p>Self Project</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+            <div class="portfolio-card">
+              <div class="portfolio-img">
+                <img src="assets/img/portfolio/blog.png" alt="Self Hosted Blog" class="img-fluid">
+                <div class="portfolio-overlay">
+                  <a href="assets/img/portfolio/blog.png" class="glightbox portfolio-lightbox"><i class="bi bi-zoom-in"></i></a>
+                  <a href="self-hosted-blog.html" class="portfolio-details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h4>
+                  <a href="self-hosted-blog.html" class="project-title-link">
+                    Implementasi Infrastruktur Blog Berbasis Container pada Home Server
+                  </a>
+                </h4>
+                <p>Cyber Security Ethics Project - CCIT</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+            <div class="portfolio-card">
+              <div class="portfolio-img">
+                <img src="assets/img/portfolio/Owncloud.webp" alt="Owncloud" class="img-fluid">
+                <div class="portfolio-overlay">
+                  <a href="assets/img/portfolio/Owncloud.webp" class="glightbox portfolio-lightbox"><i class="bi bi-zoom-in"></i></a>
+                  <a href="owncloud.html" class="portfolio-details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h4>
+                  <a href="owncloud.html" class="project-title-link">
+                    Simulasi setup Owncloud pada Ubuntu menggunakan VirtualBox
+                  </a>
+                </h4>
+                <p>Linux Server Configuration Project - CCIT</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+            <div class="portfolio-card">
+              <div class="portfolio-img">
+                <img src="assets/img/portfolio/Mikrotik1.webp" alt="Mikrotik Captive Portal" class="img-fluid">
+                <div class="portfolio-overlay">
+                  <a href="assets/img/portfolio/Mikrotik1.webp" class="glightbox portfolio-lightbox"><i class="bi bi-zoom-in"></i></a>
+                  <a href="mikrotik-captive-portal.html" class="portfolio-details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h4>
+                  <a href="mikrotik-captive-portal.html" class="project-title-link">
+                    Implementasi Captive Portal menggunakan Mikrotik pada Wifi Kos Griya Indah
+                  </a>
+                </h4>
+                <p>Self Project</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+            <div class="portfolio-card">
+              <div class="portfolio-img">
+                <img src="assets/img/portfolio/Wazuh.webp" alt="Wazuh" class="img-fluid">
+                <div class="portfolio-overlay">
+                  <a href="assets/img/portfolio/Wazuh.webp" class="glightbox portfolio-lightbox"><i class="bi bi-zoom-in"></i></a>
+                  <a href="wazuh.html" class="portfolio-details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h4>
+                  <a href="wazuh.html" class="project-title-link">
+                    Instalasi dan Konfigurasi Wazuh untuk Monitoring Server
+                  </a>
+                </h4>
+                <p>Cyber Analyst Project - CCIT</p>
+              </div>
+            </div>
+          </div>
+
+        </div></div>
+
+    </section></main>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

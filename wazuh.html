@@ -1,0 +1,420 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Wazuh Project - Portfolio Details</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link href="assets/img/favicon-16x16.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* WARNA DISAMAKAN DENGAN TEMA GELAP SOLID */
+    
+    body.portfolio-details-page {
+      background-color: #0b111a; 
+    }
+
+    /* Wrapper Kiri & Kanan */
+    .portfolio-details-media,
+    .portfolio-details-content {
+      background: #111720;
+      border: 1px solid #222b36;
+      border-radius: 16px;
+      padding: 35px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Slider Kiri */
+    .main-image .swiper-slide img {
+      border-radius: 12px;
+    }
+    
+    .thumbnail-grid img {
+      border-radius: 8px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: 0.3s;
+      background: #ffffff;
+    }
+    
+    .thumbnail-grid img:hover {
+      border-color: var(--accent-cyan);
+      transform: translateY(-3px);
+    }
+
+    /* Tech Stack Badges */
+    .tech-stack-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+    .tech-stack-badges span {
+      background: #19202a;
+      border: 1px solid #2e3846;
+      color: #8b949e;
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+    }
+
+    /* Label Badge Utama */
+    .project-badge {
+      background: rgba(0, 242, 254, 0.1) !important;
+      border: 1px solid #00f2fe;
+      color: #00f2fe !important;
+      padding: 6px 20px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .date-client {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+      margin-bottom: 25px;
+    }
+
+    .meta-item {
+      color: #a3b3bc;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .meta-item i {
+      color: #b122e5;
+      font-size: 1.1rem;
+    }
+
+    /* Typography */
+    .project-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    .lead {
+      color: #a3b3bc;
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    /* Accordion Detail Penjelasan (PUTIH SAAT DIBUKA) */
+    .accordion-item {
+      border: none;
+      background: transparent;
+      margin-bottom: 10px;
+    }
+    .accordion-button {
+      background: #111720 !important;
+      color: #ffffff !important;
+      border: 1px solid #222b36;
+      border-radius: 8px !important;
+      padding: 15px 20px;
+      font-weight: 600;
+      box-shadow: none !important;
+    }
+    .accordion-button:not(.collapsed) {
+      background: #ffffff !important;
+      color: #00f2fe !important;
+      border: none;
+      border-bottom-left-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+    }
+    .accordion-button:not(.collapsed)::after {
+      filter: brightness(0) saturate(100%) invert(71%) sepia(50%) saturate(6011%) hue-rotate(149deg) brightness(102%) contrast(106%);
+    }
+    .accordion-button:not(.collapsed) i {
+      color: #00f2fe !important;
+    }
+    .accordion-body {
+      background: #ffffff !important;
+      color: #8b949e !important;
+      border: none;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      padding: 0 20px 20px 20px;
+      line-height: 1.7;
+    }
+
+    /* Fitur List */
+    .project-features h3 {
+      font-size: 1.3rem;
+      color: #ffffff;
+      margin: 30px 0 20px 0;
+      font-weight: 600;
+    }
+    .project-features h3 i {
+      color: #b122e5;
+      margin-right: 10px;
+    }
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .feature-list li {
+      color: #a3b3bc;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+    }
+    .feature-list li i {
+      color: #00f2fe;
+      font-size: 1.2rem;
+    }
+
+    /* Navbar */
+    .navmenu .active {
+      color: #ffffff !important;
+      font-weight: 700;
+    }
+    
+    /* Tombol CTA */
+    .cta-buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .btn-view-project {
+      background: rgba(0, 242, 254, 0.1);
+      border: 1px solid rgba(0, 242, 254, 0.4);
+      color: #ffffff;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: 0.3s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-view-project:hover {
+      background: rgba(0, 242, 254, 0.2);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+    .btn-next-project {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: 0.3s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-next-project:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body class="portfolio-details-page">
+
+  <div class="bg-glow orb-1"></div>
+  <div class="bg-glow orb-2"></div>
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="project.html" class="active">Project</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://blog.bgasrdy.my.id" target="_blank">Blog</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="https://github.com/dryuxxinn" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://www.instagram.com/bgasrdy/" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/bgasrdy/" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main" style="padding-top: 120px;">
+
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+          
+          <div class="col-lg-5" data-aos="fade-right">
+            <div class="portfolio-details-media">
+              
+              <div class="main-image mb-4">
+                <div class="portfolio-details-slider swiper init-swiper">
+                  <script type="application/json" class="swiper-config">
+                    {
+                      "loop": true,
+                      "speed": 800,
+                      "autoplay": { "delay": 5000 },
+                      "slidesPerView": 1,
+                      "navigation": {
+                        "nextEl": ".swiper-button-next",
+                        "prevEl": ".swiper-button-prev"
+                      }
+                    }
+                  </script>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/Wazuh.webp" alt="Wazuh Preview 1" class="img-fluid w-100">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/Wazuh 1.webp" alt="Wazuh Preview 2" class="img-fluid w-100">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/portfolio/Wazuh2.webp" alt="Wazuh Preview 3" class="img-fluid w-100">
+                    </div>
+                  </div>
+                  <div class="swiper-button-prev" style="color: #00f2fe;"></div>
+                  <div class="swiper-button-next" style="color: #00f2fe;"></div>
+                </div>
+              </div>
+
+              <div class="thumbnail-grid">
+                <div class="row g-3">
+                  <div class="col-4">
+                    <a href="assets/img/portfolio/Wazuh.webp" class="glightbox"><img src="assets/img/portfolio/Wazuh.webp" alt="" class="img-fluid"></a>
+                  </div>
+                  <div class="col-4">
+                    <a href="assets/img/portfolio/Wazuh 1.webp" class="glightbox"><img src="assets/img/portfolio/Wazuh 1.webp" alt="" class="img-fluid"></a>
+                  </div>
+                  <div class="col-4">
+                    <a href="assets/img/portfolio/Wazuh2.webp" class="glightbox"><img src="assets/img/portfolio/Wazuh2.webp" alt="" class="img-fluid"></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tech-stack-badges">
+                <span>SQL Injection</span>
+                <span>SIEM</span>
+                <span>Log Monitoring</span>
+                <span>Cyber Security</span>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-left">
+            <div class="portfolio-details-content">
+              
+              <div class="project-meta">
+                <span class="project-badge">Security</span>
+              </div>
+              <div class="date-client">
+                <div class="meta-item"><i class="bi bi-calendar-check"></i> January 2025</div>
+                <div class="meta-item"><i class="bi bi-buildings"></i> Cyber Analyst Project - CCIT</div>
+              </div>
+
+              <h2 class="project-title">Instalasi dan Konfigurasi Wazuh untuk Monitoring Server</h2>
+
+              <p class="lead">
+                Project ini membahas implementasi deteksi serangan SQL Injection dengan memanfaatkan Wazuh sebagai platform SIEM untuk melakukan monitoring log secara real-time. Melalui konfigurasi Wazuh, sistem dapat mengidentifikasi upaya serangan berbasis SQLi, menganalisis aktivitas mencurigakan, serta memberikan notifikasi berupa alert untuk meningkatkan keamanan database dan aplikasi web.
+              </p>
+
+              <div class="accordion project-accordion" id="portfolioAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
+                      <i class="bi bi-journal-text me-2"></i> Detail Penjelasan
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#portfolioAccordion">
+                    <div class="accordion-body">
+                      Sistem ini dirancang untuk memantau dan menganalisis log dari Apache Web Server yang berpotensi menjadi target serangan SQL Injection. Wazuh digunakan sebagai IDS (Intrusion Detection System) sekaligus SIEM (Security Information and Event Management) untuk mendeteksi anomali, menghubungkan log, dan mengaktifkan alert otomatis. Dengan rule-based detection dan integrasi log monitoring, sistem mampu mengenali serangan seperti SQLi, scanning, maupun perubahan status port, sehingga membantu meningkatkan visibilitas dan respons keamanan terhadap ancaman pada server.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-features">
+                <h3><i class="bi bi-stars"></i> Fitur Wazuh</h3>
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <ul class="feature-list">
+                      <li><i class="bi bi-check2-circle"></i> Deteksi serangan real-time</li>
+                      <li><i class="bi bi-check2-circle"></i> Meningkatkan keamanan database</li>
+                      <li><i class="bi bi-check2-circle"></i> Otomatisasi alert</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-6">
+                    <ul class="feature-list">
+                      <li><i class="bi bi-check2-circle"></i> Visibilitas menyeluruh</li>
+                      <li><i class="bi bi-check2-circle"></i> Fleksibilitas konfigurasi</li>
+                      <li><i class="bi bi-check2-circle"></i> Open-source & gratis</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cta-buttons">
+                <a href="https://documentation.wazuh.com/current/deployment-options/virtual-machine/virtual-machine.html" class="btn-view-project" target="_blank">
+                  Wazuh Official Docs <i class="bi bi-box-arrow-up-right ms-2"></i>
+                </a>
+                <a href="https://github.com/dryuxxinn/Installing_and_Configuring_Wazuh_For_Monitoring_Server" class="btn-next-project" target="_blank">
+                  Project Documentation <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+              
+            </div>
+          </div>
+
+        </div> </div>
+    </section>
+
+  </main>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

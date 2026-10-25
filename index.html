@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Bergas Ardiansyah - Cyber Security Network Engineer</title>
+  <meta content="Saya adalah Mahasiswa CEP CCIT Fakultas Teknik Universitas Indonesia Jurusan Cyber Security yang memiliki minat besar dalam keamanan jaringan dan sistem. Berpengalaman dalam konfigurasi router, membangun dan mengelola local server berbasis Linux dan Windows Server, serta merancang topologi jaringan sesuai kebutuhan. Saya juga memiliki dasar penetration testing dan mendalami network forensic untuk mendeteksi ancaman siber dan menjaga keamanan data. Dengan keterampilan tersebut, saya terus mengembangkan diri untuk berkontribusi dalam menciptakan sistem yang aman dan andal. " name="description">
+  <meta content="Portfolio Network Administrator, Junior network administrator, bgasrdy, Bergas Ardiansyah" name="keywords">
+
+  <link href="assets/img/favicon-16x16.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Tambahan Styling Khusus untuk Section Snippet di Home */
+    .snippet-section {
+      padding: 80px 0;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .glass-card {
+      background: rgba(17, 26, 38, 0.4);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    
+    .glass-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(0, 242, 254, 0.3);
+      box-shadow: 0 15px 35px rgba(0, 242, 254, 0.1);
+    }
+
+    /* Resume Snippet List */
+    .resume-snippet-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .resume-snippet-list li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 20px;
+      border-left: 2px solid var(--accent-cyan);
+    }
+    .resume-snippet-list li::before {
+      content: '';
+      position: absolute;
+      left: -6px;
+      top: 5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent-cyan);
+      box-shadow: 0 0 10px var(--accent-cyan);
+    }
+    .resume-snippet-list h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 5px;
+    }
+    .resume-snippet-list .date {
+      font-size: 0.85rem;
+      color: var(--accent-purple);
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+    .resume-snippet-list p {
+      font-size: 0.95rem;
+      color: #a3b3bc;
+      margin: 0;
+    }
+
+    /* CTA Section (Contact) */
+    .cta-section {
+      background: linear-gradient(180deg, rgba(11,17,26,0) 0%, rgba(17,26,38,0.8) 100%);
+      padding: 100px 0;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .cta-title {
+      font-size: clamp(2rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    /* Footer */
+    .modern-footer {
+      background-color: #060a0f;
+      padding: 40px 0 20px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      color: #a3b3bc;
+      text-align: center;
+    }
+    .footer-socials a {
+      color: #a3b3bc;
+      font-size: 1.2rem;
+      margin: 0 10px;
+      transition: 0.3s;
+    }
+    .footer-socials a:hover {
+      color: var(--accent-cyan);
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <div class="bg-glow orb-1"></div>
+  <div class="bg-glow orb-2"></div>
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+      
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="project.html">Project</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://blog.bgasrdy.my.id" target="_blank">Blog</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="https://github.com/dryuxxinn" class="github" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://www.instagram.com/bgasrdy/" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/bgasrdy/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section id="hero" class="hero section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-5 align-items-center">
+          
+          <div class="col-lg-6 order-2 order-lg-1">
+            <div class="hero-content">
+              <h1 class="hero-name-glow" data-aos="fade-up" data-aos-delay="200">Bergas Ahmad Ardiansyah</h1>
+              
+              <h2 data-aos="fade-up" data-aos-delay="300">
+                <span class="typed text-gradient-cyan" data-typed-items="Cyber Security Engineer, Network Engineer, System Administrator"></span>
+              </h2>
+              
+              <p data-aos="fade-up" data-aos-delay="400">
+                Saya adalah praktisi jaringan yang berfokus pada rancangan jaringan dan keamanan sistem. Berpengalaman dalam konfigurasi router, pengelolaan server Linux dan Windows, serta perancangan topologi jaringan adaptif, saya juga mendalami Penetration Testing dan Cyber Forensic. Terbiasa menggunakan SIEM Wazuh, IDS Snort, dan optimasi server.
+              </p>
+              
+              <div class="hero-actions" data-aos="fade-up" data-aos-delay="500">
+                <a href="#projects-snippet" class="btn-custom btn-cyan-glow">View Work</a>
+                <a href="contact.html" class="btn-custom btn-purple-glow">Let's Talk</a>
+                <a href="CV Bergas Ardiansyah.pdf" class="btn-custom btn-cyan-glow" target="_blank">CV</a>
+              </div>
+              
+              <div class="social-links" data-aos="fade-up" data-aos-delay="600">
+                <a href="https://www.linkedin.com/in/bgasrdy/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/dryuxxinn" target="_blank"><i class="bi bi-github"></i></a>
+                <a href="https://www.instagram.com/bgasrdy/" target="_blank"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6 order-1 order-lg-2">
+            <div class="hero-image" data-aos="zoom-in" data-aos-delay="300">
+              <div class="image-wrapper">
+                <img src="assets/img/profile/profile-square-11.webp" alt="Bergas Ardiansyah" class="img-fluid profile-img-glow">
+                
+                <div class="floating-elements">
+                  <div class="floating-card ubuntu" data-aos="fade-left" data-aos-delay="700">
+                    <i class="bi bi-ubuntu"></i><span>Ubuntu</span>
+                  </div>
+                  <div class="floating-card code" data-aos="fade-right" data-aos-delay="800">
+                    <i class="bi bi-code-slash"></i><span>Code</span>
+                  </div>
+                  <div class="floating-card creativity" data-aos="fade-up" data-aos-delay="900">
+                    <i class="bi bi-shield-check"></i><span>Security</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="resume-snippet" class="snippet-section">
+      <div class="container" data-aos="fade-up">
+        
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <div class="glass-card">
+              <h3 class="mb-4" style="color: #fff;"><i class="bi bi-briefcase text-gradient-cyan me-2"></i> Pengalaman Terbaru</h3>
+              <ul class="resume-snippet-list">
+                <li>
+                  <h4>SOC Analyst Internship</h4>
+                  <div class="date">2025 | PT. Krakatau Sarana Properti</div>
+                  <p>Menganalisis log aktivitas, mendeteksi anomali jaringan, dan simulasi tools SIEM.</p>
+                </li>
+                <li>
+                  <h4>Junior Data Analyst</h4>
+                  <div class="date">2023 - 2024 | Partai Persatuan Pembangunan</div>
+                  <p>Mengelola dan menganalisis data, serta menyusun pelaporan hasil analisis yang akurat.</p>
+                </li>
+              </ul>
+              <div class="mt-4">
+                <a href="about.html" class="btn-custom btn-cyan-glow" style="padding: 8px 20px; font-size: 0.9rem;">Lihat Detail About &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="glass-card">
+              <h3 class="mb-4" style="color: #fff;"><i class="bi bi-mortarboard text-gradient-purple me-2"></i> Pendidikan & Tools</h3>
+              <ul class="resume-snippet-list mb-4">
+                <li>
+                  <h4>Teknik Informatika (S1)</h4>
+                  <div class="date">2025 - Sekarang | Universitas Trilogi</div>
+                </li>
+                <li>
+                  <h4>Cyber Security</h4>
+                  <div class="date">2023 - 2025 | CEP CCIT FT Universitas Indonesia</div>
+                </li>
+              </ul>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge" style="background: rgba(0, 242, 254, 0.1); border: 1px solid #00f2fe; color: #00f2fe; padding: 6px 12px; font-weight: 500;">Linux</span>
+                <span class="badge" style="background: rgba(0, 242, 254, 0.1); border: 1px solid #00f2fe; color: #00f2fe; padding: 6px 12px; font-weight: 500;">Cisco</span>
+                <span class="badge" style="background: rgba(0, 242, 254, 0.1); border: 1px solid #00f2fe; color: #00f2fe; padding: 6px 12px; font-weight: 500;">Wazuh</span>
+                <span class="badge" style="background: rgba(0, 242, 254, 0.1); border: 1px solid #00f2fe; color: #00f2fe; padding: 6px 12px; font-weight: 500;">Docker</span>
+                <span class="badge" style="background: rgba(0, 242, 254, 0.1); border: 1px solid #00f2fe; color: #00f2fe; padding: 6px 12px; font-weight: 500;">Mikrotik</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="projects-snippet" class="snippet-section">
+      <div class="container" data-aos="fade-up">
+        
+        <div class="d-flex justify-content-between align-items-end mb-5">
+          <div>
+            <h2 class="fw-bold" style="color: #fff; font-size: 2.5rem;">Featured <span class="text-gradient-cyan">Projects</span></h2>
+            <p class="text-light mb-0">Beberapa implementasi sistem dan jaringan terbaru saya.</p>
+          </div>
+          <div class="d-none d-md-block">
+            <a href="project.html" class="btn-custom btn-purple-glow">Lihat Semua Project</a>
+          </div>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="glass-card p-0 overflow-hidden h-100 d-flex flex-column">
+              <div class="position-relative overflow-hidden" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <img src="assets/img/portfolio/wazuh-suri1.webp" class="img-fluid w-100" alt="Wazuh SIEM" style="height: 220px; object-fit: cover; transition: 0.5s;">
+              </div>
+              <div class="p-4 flex-grow-1 d-flex flex-column">
+                <h4 style="color: #fff; font-weight: 600; font-size: 1.2rem;">Integrasi SIEM Wazuh & Suricata</h4>
+                <p style="color: #a3b3bc; font-size: 0.9rem;" class="mb-4">Mendeteksi ancaman jaringan secara real-time dengan integrasi IDS dan visualisasi log.</p>
+                <div class="mt-auto">
+                  <a href="wazuh-suricata-integtration.html" class="text-gradient-cyan fw-bold text-decoration-none">Read Case Study &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="glass-card p-0 overflow-hidden h-100 d-flex flex-column">
+              <div class="position-relative overflow-hidden" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <img src="assets/img/portfolio/Armbian1.webp" class="img-fluid w-100" alt="CasaOS" style="height: 220px; object-fit: cover; transition: 0.5s;">
+              </div>
+              <div class="p-4 flex-grow-1 d-flex flex-column">
+                <h4 style="color: #fff; font-weight: 600; font-size: 1.2rem;">Home Server CasaOS STB HG680P</h4>
+                <p style="color: #a3b3bc; font-size: 0.9rem;" class="mb-4">Eksplorasi pembuatan server lokal hemat daya menggunakan STB bekas dan manajemen container.</p>
+                <div class="mt-auto">
+                  <a href="casaos.html" class="text-gradient-cyan fw-bold text-decoration-none">Read Case Study &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="glass-card p-0 overflow-hidden h-100 d-flex flex-column">
+              <div class="position-relative overflow-hidden" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <img src="assets/img/portfolio/blog.png" class="img-fluid w-100" alt="Self Hosted Blog" style="height: 220px; object-fit: cover; transition: 0.5s;">
+              </div>
+              <div class="p-4 flex-grow-1 d-flex flex-column">
+                <h4 style="color: #fff; font-weight: 600; font-size: 1.2rem;">Self-Hosted Container Blog</h4>
+                <p style="color: #a3b3bc; font-size: 0.9rem;" class="mb-4">Deployment infrastruktur web statis menggunakan Nginx, Docker, dan akses aman Cloudflare Tunnel.</p>
+                <div class="mt-auto">
+                  <a href="self-hosted-blog.html" class="text-gradient-cyan fw-bold text-decoration-none">Read Case Study &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 text-center d-block d-md-none">
+          <a href="project.html" class="btn-custom btn-purple-glow w-100">Lihat Semua Project</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="cta-section" data-aos="fade-in">
+      <div class="container">
+        <h2 class="cta-title"><span class="text-gradient-primary">Ready to Secure Your System?</span></h2>
+        <p class="text-light mb-5 fs-5">Mari berkolaborasi untuk membangun infrastruktur jaringan yang aman dan efisien.</p>
+        <a href="contact.html" class="btn-custom btn-cyan-glow" style="padding: 15px 40px; font-size: 1.1rem;">Hubungi Saya Sekarang <i class="bi bi-envelope ms-2"></i></a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="modern-footer">
+    <div class="container">
+      <h3 class="fw-bold mb-3" style="color: #fff; font-size: 1.5rem;">BAA<span class="text-gradient-cyan">.</span></h3>
+      <div class="footer-socials mb-4">
+        <a href="https://github.com/dryuxxinn" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/bgasrdy/" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/bgasrdy/" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="mailto:bgasrdy@gmail.com"><i class="bi bi-envelope"></i></a>
+      </div>
+      <p class="mb-0" style="font-size: 0.9rem;">&copy; 2025 Bergas Ahmad Ardiansyah. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

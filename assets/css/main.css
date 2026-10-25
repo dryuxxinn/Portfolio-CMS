@@ -1,0 +1,553 @@
+/*--------------------------------------------------------------
+# Font & Color Variables
+--------------------------------------------------------------*/
+:root {
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+
+  /* Modern Dark Theme Colors */
+  --background-color: #0b111a; 
+  --default-color: #a3b3bc; 
+  --heading-color: #ffffff;
+  --accent-cyan: #00f2fe; 
+  --accent-purple: #b122e5;
+  --surface-color: rgba(255, 255, 255, 0.03);
+  --contrast-color: #ffffff;
+  
+  /* Nav Menu Colors */
+  --nav-color: #c9d1d9;
+  --nav-hover-color: #ffffff;
+  --nav-mobile-background-color: #111a26; 
+  --nav-dropdown-background-color: #162130; 
+  --nav-dropdown-color: #c9d1d9; 
+  --nav-dropdown-hover-color: #00f2fe; 
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# General Styling & Shared Classes
+--------------------------------------------------------------*/
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+  position: relative;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--accent-purple);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+/*--------------------------------------------------------------
+# Glowing Orbs Background (Efek Pendaran Belakang Layar)
+--------------------------------------------------------------*/
+.bg-glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(140px);
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.6;
+}
+.bg-glow.orb-1 {
+  width: 500px;
+  height: 500px;
+  background: rgba(0, 242, 254, 0.15); /* Teal/Cyan Orb */
+  top: -10%;
+  left: -5%;
+}
+.bg-glow.orb-2 {
+  width: 600px;
+  height: 600px;
+  background: rgba(177, 34, 229, 0.12); /* Purple Orb */
+  bottom: -15%;
+  right: -5%;
+}
+
+/* Utility Gradient Text */
+.text-gradient-cyan {
+  background: linear-gradient(90deg, var(--accent-cyan), #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/*--------------------------------------------------------------
+# Global Header (Glassmorphism Transparent)
+--------------------------------------------------------------*/
+.header {
+  background: rgba(11, 17, 26, 0.2); 
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 20px 0;
+  transition: all 0.4s;
+  z-index: 997;
+}
+
+.scrolled .header {
+  padding: 15px 0;
+  background: rgba(11, 17, 26, 0.85);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+.header .header-social-links a {
+  color: var(--nav-color);
+  padding-left: 12px;
+  display: inline-block;
+  transition: 0.3s;
+  font-size: 18px;
+}
+
+.header .header-social-links a:hover {
+  color: var(--accent-cyan);
+  transform: translateY(-1px);
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+@media (min-width: 1200px) {
+  .navmenu { padding: 0; }
+  .navmenu ul { margin: 0; padding: 0; display: flex; list-style: none; align-items: center; }
+  .navmenu li { position: relative; }
+  .navmenu > ul > li { white-space: nowrap; padding: 15px 20px; }
+  .navmenu a {
+    color: var(--nav-color);
+    font-size: 15px;
+    font-family: var(--nav-font);
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  .navmenu li:hover > a, .navmenu .active {
+    color: var(--nav-hover-color);
+    text-shadow: 0 0 10px rgba(255,255,255,0.4);
+  }
+}
+
+/* Mobile Navigation */
+@media (max-width: 1199px) {
+  .mobile-nav-toggle { color: var(--nav-color); font-size: 28px; cursor: pointer; }
+  .navmenu ul {
+    display: none; position: absolute; inset: 60px 20px 20px 20px;
+    padding: 10px 0; border-radius: 8px; background-color: var(--nav-mobile-background-color);
+    border: 1px solid rgba(255,255,255,0.05); overflow-y: auto; z-index: 9998;
+  }
+  .navmenu a { color: var(--nav-dropdown-color); padding: 10px 20px; font-family: var(--nav-font); font-size: 16px; }
+  .navmenu a:hover, .navmenu .active { color: var(--nav-dropdown-hover-color); }
+  .mobile-nav-active .navmenu { position: fixed; inset: 0; background: rgba(11, 17, 26, 0.95); backdrop-filter: blur(8px); }
+  .mobile-nav-active .navmenu > ul { display: block; }
+}
+
+/*--------------------------------------------------------------
+# Hero Section Styling & TEXT GLOW EFFECT
+--------------------------------------------------------------*/
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 60px 0;
+}
+
+/* Efek Glow Spesifik pada Teks Nama Utama */
+.hero-name-glow {
+  font-size: clamp(2.5rem, 5vw, 4.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+  /* Pendaran Cahaya Dual Drop Neon Shadow */
+  text-shadow: 0 0 20px rgba(0, 242, 254, 0.5), 0 0 40px rgba(177, 34, 229, 0.3);
+}
+
+.hero .hero-content h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.hero .hero-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  color: var(--default-color);
+}
+
+/* Modifikasi Tombol Aksi */
+.hero-actions .btn-custom {
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.btn-custom.btn-cyan-glow {
+  border: 1px solid rgba(0, 242, 254, 0.4);
+  color: #ffffff;
+}
+.btn-custom.btn-cyan-glow:hover {
+  background: rgba(0, 242, 254, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 242, 254, 0.2);
+}
+
+.btn-custom.btn-purple-glow {
+  border: 1px solid rgba(177, 34, 229, 0.4);
+  color: #ffffff;
+}
+.btn-custom.btn-purple-glow:hover {
+  background: rgba(177, 34, 229, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(177, 34, 229, 0.2);
+}
+
+.hero .social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+.hero .social-links a {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--nav-color);
+  font-size: 1.1rem;
+  transition: all 0.3s;
+}
+.hero .social-links a:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/*--------------------------------------------------------------
+# Right Side Image & Floating Cards (Glassmorphism & Shadows)
+--------------------------------------------------------------*/
+.hero .hero-image .image-wrapper {
+  position: relative;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.profile-img-glow {
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.hero .hero-image .floating-elements .floating-card {
+  position: absolute;
+  background: rgba(17, 26, 38, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 12px 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: float 4s ease-in-out infinite;
+}
+
+.hero .hero-image .floating-elements .floating-card i {
+  font-size: 1.4rem;
+  color: var(--accent-cyan);
+}
+
+.hero .hero-image .floating-elements .floating-card.ubuntu { top: 12%; right: -8%; animation-delay: 0s; }
+.hero .hero-image .floating-elements .floating-card.code { bottom: 25%; left: -12%; animation-delay: 1s; }
+.hero .hero-image .floating-elements .floating-card.creativity { bottom: 8%; right: -5%; animation-delay: 2s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@media (max-width: 991px) {
+  .hero .hero-content { text-align: center; margin-bottom: 4rem; }
+  .hero .social-links { justify-content: center; }
+  .hero .hero-image .floating-elements .floating-card { display: none; }
+}
+
+/*--------------------------------------------------------------
+# Fallback Style Preloader & Scroll Top
+--------------------------------------------------------------*/
+#preloader { position: fixed; inset: 0; z-index: 9999; background-color: var(--background-color); }
+#preloader:before { content: ""; position: absolute; border: 4px solid var(--accent-cyan); border-radius: 50%; width: 50px; height: 50px; top: calc(50% - 25px); left: calc(50% - 25px); animation: animate-preloader 1.5s linear infinite; }
+@keyframes animate-preloader { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.scroll-top { position: fixed; visibility: hidden; opacity: 0; right: 15px; bottom: 15px; z-index: 999; background-color: var(--accent-purple); width: 40px; height: 44px; border-radius: 50%; transition: 0.3s; }
+.scroll-top.active { visibility: visible; opacity: 1; }
+
+/*--------------------------------------------------------------
+# About & Resume Section (Dark Modern Theme)
+--------------------------------------------------------------*/
+.text-cyan { color: var(--accent-cyan); }
+.text-gradient-purple {
+  background: linear-gradient(90deg, #ffffff, var(--accent-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism Cards for About */
+.glass-card {
+  background: rgba(17, 26, 38, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  /* height: 100%; <--- BARIS INI YANG DIHAPUS */
+  
+  /* Opsional: Tambahkan margin-bottom agar jarak antar kartu lebih stabil */
+  margin-bottom: 2rem; 
+}
+/* Resume Timeline Styling */
+.resume-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  border-bottom: 2px solid rgba(0, 242, 254, 0.2);
+  padding-bottom: 10px;
+}
+.resume-item {
+  padding: 0 0 30px 20px;
+  border-left: 2px solid rgba(0, 242, 254, 0.4);
+  position: relative;
+}
+.resume-item::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  left: -8px;
+  top: 0;
+  background: var(--background-color);
+  border: 2px solid var(--accent-cyan);
+  box-shadow: 0 0 10px var(--accent-cyan);
+}
+.resume-item h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  margin-bottom: 8px;
+}
+.resume-item h5 {
+  font-size: 0.85rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 500;
+  margin-bottom: 15px;
+  border-radius: 50px;
+  color: #c9d1d9;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.resume-item ul {
+  padding-left: 20px;
+  color: #a3b3bc;
+}
+.resume-item ul li {
+  margin-bottom: 10px;
+}
+.custom-list {
+  list-style: none;
+  padding: 0;
+}
+.custom-list li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #a3b3bc;
+}
+
+/* Tools Icons */
+.tool-icon-wrapper {
+  padding: 15px 5px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+.tool-icon-wrapper img {
+  height: 45px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.1));
+}
+.tool-icon-wrapper p {
+  font-size: 0.85rem;
+  color: #ffffff;
+  margin: 0;
+}
+.tool-icon-wrapper:hover {
+  background: rgba(0, 242, 254, 0.08);
+  border-color: rgba(0, 242, 254, 0.3);
+  transform: translateY(-5px);
+}
+.tool-icon-wrapper:hover img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px var(--accent-cyan));
+}
+
+/*--------------------------------------------------------------
+# Certificates / Portfolio Cards (Glassmorphism)
+--------------------------------------------------------------*/
+.portfolio-card {
+  background: rgba(17, 26, 38, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.portfolio-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(177, 34, 229, 0.4);
+  box-shadow: 0 15px 30px rgba(177, 34, 229, 0.15);
+}
+.portfolio-img {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.portfolio-img img {
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+.portfolio-card:hover .portfolio-img img {
+  transform: scale(1.08);
+}
+.portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 17, 26, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
+}
+.portfolio-lightbox i {
+  font-size: 1.8rem;
+  color: var(--contrast-color);
+  background: var(--accent-cyan);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px var(--accent-cyan);
+  transition: all 0.3s ease;
+}
+.portfolio-lightbox i:hover {
+  background: var(--accent-purple);
+  box-shadow: 0 0 20px var(--accent-purple);
+  transform: scale(1.1);
+}
+.portfolio-info {
+  padding: 20px;
+  text-align: center;
+}
+.portfolio-info h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+.portfolio-info p {
+  color: var(--accent-purple);
+  font-size: 0.85rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+#portfolio {
+  position: relative;
+  z-index: 2;
+  clear: both;
+}
+
+/* --- FIX NAVBAR MOBILE NGEBUG --- */
+@media (max-width: 1199px) {
+  /* Memastikan background blur layar hp saat menu dibuka full layar */
+  .mobile-nav-active .navmenu {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(11, 17, 26, 0.95) !important;
+    backdrop-filter: blur(8px) !important;
+    z-index: 9998 !important;
+  }
+
+  /* Mengatur posisi kotak menu agar rapi di tengah dan di atas teks glow */
+  .mobile-nav-active .navmenu > ul {
+    display: block !important;
+    position: absolute !important;
+    top: 60px !important;
+    left: 20px !important;
+    right: 20px !important;
+    bottom: auto !important;
+    background-color: #111720 !important; /* Warna sesuai tema dark */
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 15px 0 !important;
+    border-radius: 12px !important;
+    z-index: 9999 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  /* Memastikan tombol X (Close) selalu ada di pojok kanan atas */
+  .mobile-nav-active .mobile-nav-toggle {
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    color: #fff !important;
+    z-index: 10000 !important;
+  }
+}
